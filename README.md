@@ -15,6 +15,6 @@ https://maven.apache.org/download.cgi#system-requirements
 on Ubuntu Linux - apt install -y maven
 --------------------------------------
 
-To Test the Build the Java Application Using Maven run: **mvn package**
+To Test the and Build the Java Application Using Maven run: **mvn package**
 
 
