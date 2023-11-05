@@ -1,17 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>java-maven-app</artifactId>
-    <version>1.1.7</version>
-
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+    <!-- Other configuration elements... -->
 
     <build>
         <plugins>
@@ -27,27 +19,20 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Add the maven-compiler-plugin configuration here -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version> <!-- Keep your desired version -->
+                <configuration>
+                    <source>1.8</source> <!-- Adjust the source version as needed -->
+                    <target>1.8</target> <!-- Adjust the target version as needed -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.3.4.RELEASE</version>
-        </dependency>
+    <!-- Dependencies and other elements... -->
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>6.4</version>
-        </dependency>
-    </dependencies>
 </project>
