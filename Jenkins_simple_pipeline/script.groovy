@@ -3,7 +3,7 @@ def buildJar() {
     sh 'mvn package'
 } 
 
-def buildImage() {
+def buildMyImage() {
     echo "building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
          sh 'docker build -t omosefunmi/demo-app:jma-2.0  .'
