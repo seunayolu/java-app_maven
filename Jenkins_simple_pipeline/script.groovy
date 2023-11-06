@@ -5,7 +5,7 @@ def buildJar() {
 
 def buildImage() {
     echo "building the docker image..."
-  
+    echo "please build"
 } 
 
 def deployApp() {
