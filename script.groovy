@@ -3,12 +3,12 @@ def buildJar() {
     sh 'mvn package'
 } 
 
-def buildImageDockerhub() {
+def buildMyImage() {
     echo "building the docker image..."
-    withCredentials([usernamePassword(credentialsId: '[ID_Docker_Repo]', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t [repository_name/repository_tag:imageID] .'
-        sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh 'docker push [repository_name/repository_tag:imageID]'
+    withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+         sh 'docker build -t omosefunmi/demo-app:jma-2.0  .'
+         sh "echo $PASS | docker login -u $USER --password-stdin"
+         sh 'docker push omosefunmi/demo-app:jma-2.0'
     }
 } 
 
